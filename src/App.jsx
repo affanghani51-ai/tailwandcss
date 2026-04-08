@@ -7,7 +7,7 @@ import Passion from './components/passion.jsx'
 import Why from './components/why.jsx'
 import Industries from './components/industries.jsx'
 import Tech from './components/tech.jsx'
-import Cart  from './components/cart.jsx'
+import Footer from './components/footer.jsx'
 
 function App() {
   return (
@@ -20,8 +20,7 @@ function App() {
       <Industries />
       <Tech/>
       <About />
-      <Cart name="Sara" age= "25" />
-            <Cart name="ali" age= "26" />
+      <Footer/>
 
 
 

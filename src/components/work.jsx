@@ -3,7 +3,7 @@ function Work() {
 
         <div className='w-full h-150 '>
             <div className='text-center p-10 '>
-                <h1 className="text-5xl font-bold text-black ">My Slills </h1>
+                <h1 className="text-5xl font-bold text-black ">My Skills </h1>
 
                 <p className='text-lg text-gray-900 mt-5'>I have a strong foundation in web development, with skills in HTML, CSS, and basic JavaScript.  I am capable of creating <br />responsive  and user-friendly websites that work well across different devices. Along with technical abilities, <br /> I have good problem-solving skills and a creative mindset, which help me design clean and modern interfaces. <br /> I am continuously learning and improving my skills to stay updated with the latest trends in web development.</p>
             </div>

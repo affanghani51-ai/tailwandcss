@@ -4,7 +4,7 @@ import './herosection.jsx'
 import 'remixicon/fonts/remixicon.css'
 function Navbar() {
   return (
-    <section className="bg-white   flex gap-10 w-full">
+    <section className="bg-white   flex gap-10 w-full fixed z-1 ">
       <img src={gg} alt="" width={100} height={100} ></img>
  <div className=' w-3/4 flex items-center justify-center gap-15 flex-row  hidden lg:flex '>
       <button popovertarget="desktop-menu-product" class="flex items-center gap-x-1 text-lg/6 font-semibold text-blue-500 hover:text-red-500  hover:transition hover:duration-500 delay-150 duration-100 transform hover:scale-125 transition ease-linear " >

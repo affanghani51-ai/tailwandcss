@@ -1,60 +1,65 @@
 function Industries() {
-    return (
-        <div className='w-full h-150 '>
-            <div className='text-center p-5 '>
-                <h1 className="text-5xl font-bold text-black">Industries I Worked With</h1>
-                <p className='text-lg text-black mt-5'>We support companies across multiple industries, including logistics, healthcare, real estate,
-                    e-commerce, and <br />professional services. Each industry has unique workflows — we design systems that match them.</p>
-            </div>
-            <div className="flex w-full justify-center ">
-                <div className="w-40 h-40 border border-blue-50 hover:border-blue-500 
-     duration-300 transition rounded-lg p-5 m-10 gap-10 justify-space-between shadow-lg/10">
-                    <div className=" rounded-xl text-center ">
-                        <i class="ri-truck-line text-4xl text-blue-500"></i>
-                        <h1 className='text-14 font-bold pt-2'>Logistics & Transportation</h1>
-                    </div>
+  const data = [
+    {
+      icon: "ri-truck-line",
+      title: "Logistics & Transportation",
+    },
+    {
+      icon: "ri-heart-pulse-line",
+      title: "Healthcare & Health Tech",
+    },
+    {
+      icon: "ri-home-4-line",
+      title: "Real Estate & Property Management",
+    },
+    {
+      icon: "ri-shopping-cart-line",
+      title: "E-commerce & Retail",
+    },
+    {
+      icon: "ri-briefcase-3-line",
+      title: "Professional Services & Startups",
+    },
+  ];
 
-                </div>
+  return (
+    <div className="w-full py-16 px-4 lg:px-16">
+      
+      {/* Heading */}
+      <div className="text-center max-w-3xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black">
+          Industries I Worked With
+        </h1>
+        <p className="text-sm sm:text-base lg:text-lg text-gray-600 mt-4">
+          We support companies across multiple industries, including logistics,
+          healthcare, real estate, e-commerce, and professional services. Each
+          industry has unique workflows — we design systems that match them.
+        </p>
+      </div>
 
-             <div className="w-40 h-40 border border-blue-50 hover:border-blue-500 
-  duration-300 transition rounded-lg p-5 m-10 gap-10 justify-space-between shadow-lg/10">
-                 <div className=" rounded-xl text-center ">
-                     <i class="ri-poker-hearts-line text-4xl text-blue-500"></i>
-                     <h1 className='text-14 font-bold pt-2'>Healthcare & Health Tech</h1>
-                 </div>
-             </div>
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-12">
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 hover:border-blue-500 transition duration-300 rounded-lg p-6 text-center shadow-sm hover:shadow-lg"
+          >
+            <i className={`${item.icon} text-3xl sm:text-4xl text-blue-500`}></i>
+            <h2 className="text-sm sm:text-base font-semibold mt-3">
+              {item.title}
+            </h2>
+          </div>
+        ))}
+      </div>
 
-                          <div className="w-40 h-40 border border-blue-50 hover:border-blue-500 
-  duration-300 transition rounded-lg p-5 m-10 gap-10 justify-space-between shadow-lg/10">
-                 <div className=" rounded-xl text-center ">
-                     <i class="ri-home-4-line text-4xl text-blue-500"></i>
-                     <h1 className='text-14 font-bold pt-2'>Real Estate & Property Management</h1>
-                 </div>
-             </div>
-
-                          <div className="w-40 h-40 border border-blue-50 hover:border-blue-500 
-  duration-300 transition rounded-lg p-5 m-10 gap-10 justify-space-between shadow-lg/10">
-                 <div className=" rounded-xl text-center ">
-                     <i class="ri-shopping-cart-line text-4xl text-blue-500"></i>
-                     <h1 className='text-14 font-bold pt-2'>E-comerce & Retail</h1>
-                 </div>
-             </div>
-
-                          <div className="w-40 h-40 border border-blue-50 hover:border-blue-500 
-  duration-300 transition rounded-lg p-5 m-10 gap-10 justify-space-between shadow-lg/10">
-                 <div className=" rounded-xl text-center ">
-                     <i class="ri-briefcase-3-line text-4xl text-blue-500"></i>
-                     <h1 className='text-14 font-bold pt-2'>Professional Services & Startups</h1>
-                 </div>
-             </div>
-
-            </div>
-            <div className="w-full text-center mt-3">
-            <button className="bg-linear-to-r/hsl from-indigo-600 to-teal-600 p-3 rounded-lg text-white 
-            font-bold hover:from-indigo-500 hover:to-teal-400  ">View All Industries</button>
-</div>        
-        </div>
-    );
+      {/* Button */}
+      <div className="w-full text-center mt-10">
+        <button className="bg-gradient-to-r from-indigo-600 to-teal-600 px-6 py-3 rounded-lg text-white font-semibold hover:from-indigo-500 hover:to-teal-400 transition duration-300">
+          View All Industries
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Industries;

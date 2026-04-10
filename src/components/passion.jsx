@@ -1,66 +1,74 @@
-import step1 from '../assets/step1.svg'
-import step2 from '../assets/step2.svg'
-import step3 from '../assets/step3.svg'
+import step1 from "../assets/step1.svg";
+import step2 from "../assets/step2.svg";
+import step3 from "../assets/step3.svg";
+
 function Passion() {
-    return (
-        <div>
-            <div className='text-center p-10 '>
-                <h1 className="text-5xl font-bold text-black ">How I Work </h1>
+  const steps = [
+    {
+      img: step1,
+      title: "1. Discovery Call",
+      desc: "We understand your goals and challenges. This initial conversation helps us align on what success looks like for your project.",
+    },
+    {
+      img: step2,
+      title: "2. Planning",
+      desc: "Clear scope, timeline, and technical approach. We create a detailed roadmap so you know exactly what to expect.",
+    },
+    {
+      img: step3,
+      title: "3. Development",
+      desc: "Build, test, and refine with regular check-ins and transparent progress updates.",
+    },
+    {
+      img: step1,
+      title: "4. Launch & Support",
+      desc: "Ongoing improvements and maintenance to ensure your systems run smoothly.",
+    },
+  ];
+
+  return (
+    <div className="w-full px-4 lg:px-16 py-16">
+      
+      {/* Heading */}
+      <div className="text-center">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black">
+          How I Work
+        </h1>
+      </div>
+
+      {/* Steps */}
+      <div className="mt-12 space-y-16">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className={`flex flex-col lg:flex-row items-center gap-10 ${
+              index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+            }`}
+          >
+            {/* Image */}
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <img
+                src={step.img}
+                alt=""
+                className="w-64 sm:w-80 lg:w-96"
+              />
             </div>
-            <div className='flex mt-10 gap-20'>
-                <div >
-                    <img src={step1} alt="" width={400} className="ml-80" />
-                </div>
-                <div className='bg-blue-50 shadow-lg/10 w-150 h-30 rounded-lg'>
-                    <div>
-                        <h1 className='text-3xl font-dark text-blue-500   '>1.Discovery Call</h1>
-                        <p className='pt-3'>We understand your goals and challenges. This initial conversation helps us align on what success looks like for your project.</p>
-                    </div>
-                </div>
+
+            {/* Content */}
+            <div className="w-full lg:w-1/2 bg-blue-50 shadow-md rounded-lg p-6 text-center lg:text-left">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-500">
+                {step.title}
+              </h2>
+              <p className="mt-3 text-gray-600 text-sm sm:text-base">
+                {step.desc}
+              </p>
             </div>
+          </div>
+        ))}
+      </div>
 
-
-            <div className='flex mt-20 gap-20'>
-                <div className='bg-blue-50 shadow-lg/10 w-150 h-30 rounded-lg ml-40 mt-20 '>
-                    <div>
-                        <h1 className='text-3xl font-dark text-blue-500   '>2. Planning</h1>
-                        <p className='pt-3'>Clear scope, timeline, and technical approach. We create a detailed roadmap so you know exactly what to expect at every stage.</p>
-                    </div>
-                </div>
-                <div >
-                    <img src={step2} alt="" width={400} />
-                </div>
-            </div>
-
-            <div className='flex mt-20 gap-20'>
-                <div >
-                    <img src={step3} alt="" width={400} className="ml-80" />
-                </div>
-                <div className='bg-blue-50 shadow-lg/10 w-150 h-30 rounded-lg mt-20'>
-                    <div>
-                        <h1 className='text-3xl font-dark text-blue-500   '>3. Development</h1>
-                        <p className='pt-3'>Build, test, and refine. Our team develops your solution with regular check-ins and transparent progress updates.   </p>
-                    </div>
-                </div>
-            </div>
-
-
-<div className='flex mt-20 gap-20'>
-    <div className='bg-blue-50 shadow-lg/10 w-150 h-30 rounded-lg ml-40 mt-20 '>
-        <div>
-            <h1 className='text-3xl font-dark text-blue-500   '>4. Launch & Support</h1>
-            <p className='pt-3'>Ongoing improvements and maintenance. We don't just launch and leave — we provide continued support to ensure your systems run smoothly.</p>
-        </div>
     </div>
-    <div >
-        <img src={step1} alt="" width={400} />
-    </div>
-</div>
-
-
-        </div>
-
-    )
+  );
 }
 
 export default Passion;

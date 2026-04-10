@@ -1,25 +1,39 @@
+import vid2 from "../assets/vid2.mp4";
 
-import '../index.css'
-import vid2 from '../assets/vid2.mp4'
 function Herosection() {
   return (
-<section className="parent relative">
-  <video src={vid2} autoPlay loop muted></video>
-  <h1 className="text-5xl font-bold text-black absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-shadow-lg/50 hover:text-blue-500 hover:transition hover:duration-500 ">
-    Hi! My Self Affan
-  </h1>
-  <p className="text-3xl font-bold text-white absolute top-120 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-shadow-lg/30 hover:text-black-500 hover:transition hover:duration-500">
-    Your Trusted IT Partner for Innovative Solutions
-  </p>
-  <button className="bg-black text-white px-6 py-3 rounded-md absolute top-140 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hover:bg-blue-500 hover:text-white hover:transition hover:duration-500 shadow-lg/100 inline-block animate-bounce rounded-full p-4 ">
-    Get Started
-  </button>
-</section>
-  
-   
-  )
+    <section className="relative w-full h-screen overflow-hidden">
+      
+      {/* Background Video */}
+      <video
+        src={vid2}
+        autoPlay
+        loop
+        muted
+        className="absolute w-full h-full object-cover"
+      ></video>
+
+      {/* Overlay (optional dark layer for readability) */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white hover:text-blue-400 transition duration-300">
+          Hi! My Self Affan
+        </h1>
+
+        <p className="mt-4 text-lg sm:text-xl lg:text-2xl text-gray-200 max-w-2xl">
+          Your Trusted IT Partner for Innovative Solutions
+        </p>
+
+        <button className="mt-6 bg-black text-white px-6 py-3 rounded-full hover:bg-blue-500 transition duration-300 animate-bounce">
+          Get Started
+        </button>
+
+      </div>
+    </section>
+  );
 }
 
-         
-
-export default Herosection
+export default Herosection;
